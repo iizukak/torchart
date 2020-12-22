@@ -16,7 +16,7 @@ UPSCALING_FACTOR = 1.2
 UPSCALING_STEPS = 12
 LEARNING_RATE = 0.1
 TARGET_LAYER_NUMBER = 15
-TARGET_FILTER_NUMBER = 10
+TARGET_FILTER_NUMBER = 127
 OPT_STEPS = 20
 
 
@@ -68,7 +68,7 @@ class FilterVisualizer():
     def save_output_image(self):
         # TODO: Improve output image quality for human evaluation
         torchvision.utils.save_image(
-                torch.nn.functional.normalize(self.output[0]),
+                torch.nn.functional.normalize(self.output),
                 "./torchart/filtervisualizatin/output/vgg16_{}_{}.png".format(
                     str(self.layer), str(self.filter)))
 
