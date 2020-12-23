@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Output Images
-torchart/filtervisualizatin/output/*.png
+torchart/*/output/*.png
