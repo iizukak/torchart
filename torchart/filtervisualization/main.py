@@ -1,4 +1,4 @@
-from filter_visualizer import FilterVisualizer
+from torchart.filtervisualization.filter_visualizer import FilterVisualizer
 
 #
 # Hyper Parameters for the training
@@ -30,7 +30,6 @@ def main():
         device=DEVICE
     )
     for filter in TARGET_FILTER_NUMBER:
-        print("Train {} th filter".format(filter))
         visualizer.train(filter=filter)
         visualizer.save_output_image()
 

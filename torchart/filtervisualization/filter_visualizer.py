@@ -42,6 +42,7 @@ class FilterVisualizer:
 
     def train(self, filter):
         # Training image for the target layer
+        print("\nTrain {} th filter".format(filter))
         current_size = self.size
         self.filter = filter
         img = torch.tensor(
@@ -63,8 +64,8 @@ class FilterVisualizer:
                 loss.backward()
                 optimizer.step()
             print(
-                "layer: {}, upscaling_step: {}, loss:{}".format(
-                    self.layer, self.filter, loss
+                    "layer: {}, filter: {} upscaling_step: {}, loss:{}".format(
+                    self.layer, self.filter, upscaling_step, loss
                 )
             )
             self.output = img

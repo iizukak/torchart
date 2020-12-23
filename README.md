@@ -10,14 +10,20 @@ pip3 install -r ./requirements.txt
 
 ## Usage
 
+### Filter Visualization
+
+```
+$ PYTHONPATH=. python3 torchart/filtervisualization/main.py
+```
+
 ### Run unit test
 
 ```
-pytest ./torchart
+$ pytest ./torchart
 ```
 
 ### Check code format
 
 ```
-flake8 ./torchart
+$ flake8 ./torchart
 ```
