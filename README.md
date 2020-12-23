@@ -2,10 +2,11 @@
 
 Experimental Art Projects with PyTorch
 
-## Install requirements
+## Installation
 
 ```
-pip3 install -r ./requirements.txt
+$ pip3 install -r ./requirements.txt
+$ export PYTHONPATH="$PWD:$PYTHONPATH"
 ```
 
 ## Usage
@@ -13,7 +14,7 @@ pip3 install -r ./requirements.txt
 ### Filter Visualization
 
 ```
-$ PYTHONPATH=. python3 torchart/filtervisualization/main.py
+$ python3 torchart/filtervisualization/main.py
 ```
 
 ### Run unit test

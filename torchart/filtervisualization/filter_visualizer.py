@@ -64,7 +64,7 @@ class FilterVisualizer:
                 loss.backward()
                 optimizer.step()
             print(
-                    "layer: {}, filter: {} upscaling_step: {}, loss:{}".format(
+                "layer: {}, filter: {} upscaling_step: {}, loss:{}".format(
                     self.layer, self.filter, upscaling_step, loss
                 )
             )
