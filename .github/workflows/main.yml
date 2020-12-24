@@ -24,10 +24,10 @@ jobs:
 
       - name: Run pytest
         run: |
-          export PYTHONPATH="$PWD:$PYTHONPATH"
+          export PYTHONPATH=".:$PYTHONPATH"
           pytest ./torchart
 
       - name: Run flake8
         run: |
-          export PYTHONPATH="$PWD:$PYTHONPATH"
+          export PYTHONPATH=".:$PYTHONPATH"
           flake8 ./torchart
