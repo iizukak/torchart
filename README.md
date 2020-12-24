@@ -24,7 +24,7 @@ Layer: `model.features[3]`, Filter: 34(Left) 39(Center), 52(Right)
 
 Layer: `model.features[10]`, Filter: 1(Left) 163(Center) 237(Right)
 
-<img src="sample_output/filtervisualization/vgg16_29_33.png" width=224px height=224px> <img src="sample_output/filtervisualization/vgg16_29_132.png" width=224px height=224px> <img src="sample_output/filtervisualization/vgg16_29_390.png.png" width=224px height=224px>
+<img src="sample_output/filtervisualization/vgg16_29_33.png" width=224px height=224px> <img src="sample_output/filtervisualization/vgg16_29_132.png" width=224px height=224px> <img src="sample_output/filtervisualization/vgg16_29_390.png" width=224px height=224px>
 
 Layer: `model.features[29]`, Filter: 33(Left) 132(Center), 390(Right)
 
