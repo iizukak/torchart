@@ -1,5 +1,7 @@
 # torchart
 
+![ci](https://github.com/iizukak/torchart/workflows/ci/badge.svg?branch=main)
+
 Experimental Art Projects with PyTorch
 
 ## Installation
