@@ -15,10 +15,12 @@ def test_up_scaling():
 
 
 def test_save_output_image():
-    test_file_path = "./torchart/filtervisualization/output/vgg16_3_0.png"
+    test_file_path = "./vgg16_3_0.png"
     if os.path.exists(test_file_path):
         os.remove(test_file_path)
     visualizer = FilterVisualizer(100, 3, 1, 1.5, 0.1, 1, "cpu")
     visualizer.train(0)
     visualizer.save_output_image()
     assert os.path.exists(test_file_path)
+    if os.path.exists(test_file_path):
+        os.remove(test_file_path)

@@ -35,22 +35,27 @@ Layer: `model.features[29]`, Filter: 33(Left) 132(Center), 390(Right)
 
 ### Usage
 
-To generate images, just run `torchart/filtervisualization/main.py`.
+You can use `layer` and `filters` options to specify target number of layer and filters.
 
 ```
 $ python3 torchart/filtervisualization/main.py
+$ python3 torchart/filtervisualization/main.py layer=3 filters='[23, 34, 39, 52]'
+$ python3 torchart/filtervisualization/main.py layer=10 filters='[1, 161, 163, 237, 241]'
+$ python3 torchart/filtervisualization/main.py layer=29 filters='[5, 33, 132, 177, 241, 286, 312]'
 ```
 
-To change target filters and layers, edit this part in `main.py` as you like.
+If you want to change more hyper parametrs, Please check `torchart/filtervisualization/config.yaml`.
+We are using [hydra](https://hydra.cc/). And you can change hyper parameters as command line arguments.
+
+Output directory structure is
 
 ```
-TARGET_LAYER_NUMBER = 3
-# TARGET_LAYER_NUMBER = 10
-# TARGET_LAYER_NUMBER = 29
-
-TARGET_FILTER_NUMBER = [23, 34, 39, 52]  # This is for the Layer 3
-# TARGET_FILTER_NUMBER = [1, 161, 163, 237, 241] # This is for the Layer 10
-# TARGET_FILTER_NUMBER = [5, 33, 132, 177, 241, 286, 312, 390] # This is for the Layer 29
+outputs
+└── yyyy-mm-dd
+    ├── hh-mm-ss
+    │   ├── main.log
+    │   ├── vgg16_{layer_number}_{filter_number}.png
+...
 ```
 
 ## Unit testing and Lint
@@ -58,11 +63,11 @@ TARGET_FILTER_NUMBER = [23, 34, 39, 52]  # This is for the Layer 3
 ### pytest
 
 ```
-$ pytest ./torchart
+$ pytest torchart
 ```
 
 ### flake8
 
 ```
-$ flake8 ./torchart
+$ flake8 torchart
 ```
