@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Installation
+        run: |
+          pip3 install -r ./requirements.txt
+          export PYTHONPATH="$PWD:$PYTHONPATH"
+
+      - name: Run pytest
+        run: |
+          pytest ./torchart
+
+      - name: Run flake8
+        run: |
+          flake8 ./torchart
