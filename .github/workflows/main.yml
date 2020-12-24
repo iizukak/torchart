@@ -21,14 +21,13 @@ jobs:
       - name: Installation
         run: |
           pip3 install -r ./requirements.txt
-          echo "PWD="
-          echo $PWD
-          export PYTHONPATH="$PWD:$PYTHONPATH"
 
       - name: Run pytest
         run: |
+          export PYTHONPATH="$PWD:$PYTHONPATH"
           pytest ./torchart
 
       - name: Run flake8
         run: |
+          export PYTHONPATH="$PWD:$PYTHONPATH"
           flake8 ./torchart
