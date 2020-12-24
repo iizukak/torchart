@@ -47,6 +47,16 @@ $ python3 torchart/filtervisualization/main.py layer=29 filters='[5, 33, 132, 17
 If you want to change more hyper parametrs, Please check `torchart/filtervisualization/config.yaml`.
 We are using [hydra](https://hydra.cc/). And you can change hyper parameters as command line arguments.
 
+Output directory structure is
+
+```
+outputs
+└── yyyy-mm-dd
+    ├── hh-mm-ss
+    │   ├── main.log
+    │   ├── vgg16_{layer_number}_{filter_number}.png
+...
+```
 
 ## Unit testing and Lint
 
