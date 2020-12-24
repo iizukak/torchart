@@ -25,8 +25,8 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest ./torchart
+          PYTHONPATH=".:$PYTHONPATH" pytest ./torchart
 
       - name: Run flake8
         run: |
-          flake8 ./torchart
+          PYTHONPATH=".:$PYTHONPATH" flake8 ./torchart
