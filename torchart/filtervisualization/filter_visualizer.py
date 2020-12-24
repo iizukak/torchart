@@ -87,7 +87,7 @@ class FilterVisualizer:
     def save_output_image(self):
         torchvision.utils.save_image(
             torch.nn.functional.normalize(self.output),
-            "./torchart/filtervisualization/output/vgg16_{}_{}.png".format(
+            "vgg16_{}_{}.png".format(
                 str(self.layer), str(self.filter)
             ),
         )

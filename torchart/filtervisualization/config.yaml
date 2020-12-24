@@ -1,0 +1,12 @@
+initial_image_size: 56
+upscaling_factor: 1.2  # Each steps, image_size = image * UPSCALING_FACTOR
+upscaling_steps: 12    # Increase this number to generate larger image
+learning_rate: 0.1
+layer: 3
+filters:
+    - 23
+    - 34
+    - 39
+    - 52
+opt_steps: 30
+device: 'cuda'

@@ -3,3 +3,4 @@ torchvision==0.8.2
 numpy==1.19.0
 pytest==6.2.0
 flake8==3.8.4
+hydra-core==1.0.4
