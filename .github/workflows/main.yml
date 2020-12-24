@@ -21,13 +21,12 @@ jobs:
       - name: Installation
         run: |
           pip3 install -r ./requirements.txt
+          export PYTHONPATH=".:$PYTHONPATH"
 
       - name: Run pytest
         run: |
-          export PYTHONPATH=".:$PYTHONPATH"
           python3 -m pytest ./torchart
 
       - name: Run flake8
         run: |
-          export PYTHONPATH=".:$PYTHONPATH"
           flake8 ./torchart
