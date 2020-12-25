@@ -1,9 +1,10 @@
 import hydra
 from torchart.filtervisualization.filter_visualizer import FilterVisualizer
+from omegaconf.dictconfig import DictConfig
 
 
 @hydra.main(config_name="config")
-def main(cfg):
+def main(cfg: DictConfig):
     visualizer = FilterVisualizer(
         size=cfg.initial_image_size,
         layer=cfg.layer,
@@ -11,7 +12,7 @@ def main(cfg):
         upscaling_factor=cfg.upscaling_factor,
         learning_rate=cfg.learning_rate,
         opt_steps=cfg.opt_steps,
-        device=cfg.device
+        device=cfg.device,
     )
     for filter in cfg.filters:
         visualizer.train(filter=filter)

@@ -71,3 +71,9 @@ $ pytest torchart
 ```
 $ flake8 torchart
 ```
+
+### mypy
+
+```
+$ mypy torchart
+`

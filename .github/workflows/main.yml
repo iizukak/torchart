@@ -30,3 +30,7 @@ jobs:
       - name: Run flake8
         run: |
           flake8 ./torchart
+
+      - name: Run mypy
+        run: |
+          mypy ./torchart
