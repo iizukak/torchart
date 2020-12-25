@@ -58,7 +58,7 @@ outputs
 ...
 ```
 
-## Unit testing and Lint
+## Unit Test and Code Formart Checking
 
 ### pytest
 
@@ -76,4 +76,10 @@ $ flake8 torchart
 
 ```
 $ mypy torchart
-`
+```
+
+### isort
+
+```
+$ isort -c torchart
+```
