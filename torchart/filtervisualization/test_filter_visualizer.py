@@ -1,5 +1,7 @@
-import torch
 import os
+
+import torch
+
 from torchart.filtervisualization.filter_visualizer import FilterVisualizer
 
 

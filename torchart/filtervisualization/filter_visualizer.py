@@ -7,10 +7,10 @@
 #
 
 
-import torch
-import torchvision
 import numpy as np
 import PIL
+import torch
+import torchvision
 
 
 class FilterVisualizer:

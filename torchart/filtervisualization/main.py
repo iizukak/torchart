@@ -1,6 +1,7 @@
 import hydra
-from torchart.filtervisualization.filter_visualizer import FilterVisualizer
 from omegaconf.dictconfig import DictConfig
+
+from torchart.filtervisualization.filter_visualizer import FilterVisualizer
 
 
 @hydra.main(config_name="config")
