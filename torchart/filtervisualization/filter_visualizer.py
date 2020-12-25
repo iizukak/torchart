@@ -16,13 +16,13 @@ import PIL
 class FilterVisualizer:
     def __init__(
         self,
-        size,
-        layer,
-        upscaling_steps,
-        upscaling_factor,
-        learning_rate,
-        opt_steps,
-        device,
+        size: int,
+        layer: int,
+        upscaling_steps: int,
+        upscaling_factor: float,
+        learning_rate: float,
+        opt_steps: int,
+        device: str,
     ):
         self.layer = layer
         self.size = size
@@ -40,7 +40,7 @@ class FilterVisualizer:
             self.model = self.model.cpu().eval()
         self.set_fook(self.layer)
 
-    def train(self, filter):
+    def train(self, filter: int) -> None:
         # Training image for the target layer
         print("\nTrain {} th filter".format(filter))
         current_size = self.size
@@ -78,16 +78,14 @@ class FilterVisualizer:
 
         # Save Image
 
-    def set_fook(self, layer):
+    def set_fook(self, layer: int) -> None:
         def forward_hook(module, input, output):
             self.forward_hook_tensor = output
 
         self.model.features[layer].register_forward_hook(forward_hook)
 
-    def save_output_image(self):
+    def save_output_image(self) -> None:
         torchvision.utils.save_image(
             torch.nn.functional.normalize(self.output),
-            "vgg16_{}_{}.png".format(
-                str(self.layer), str(self.filter)
-            ),
+            "vgg16_{}_{}.png".format(str(self.layer), str(self.filter)),
         )
