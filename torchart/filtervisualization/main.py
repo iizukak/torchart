@@ -5,7 +5,7 @@ from torchart.filtervisualization.filter_visualizer import FilterVisualizer
 
 
 @hydra.main(config_name="config")
-def main(cfg: DictConfig):
+def main(cfg: DictConfig) -> None:
     visualizer = FilterVisualizer(
         size=cfg.initial_image_size,
         layer=cfg.layer,

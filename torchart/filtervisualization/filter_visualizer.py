@@ -79,7 +79,7 @@ class FilterVisualizer:
         # Save Image
 
     def set_fook(self, layer: int) -> None:
-        def forward_hook(module, input, output):
+        def forward_hook(module: torch.nn.Module, input: torch.Tensor, output: torch.Tensor) -> None:
             self.forward_hook_tensor = output
 
         self.model.features[layer].register_forward_hook(forward_hook)
